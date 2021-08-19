@@ -18,8 +18,8 @@ function enterkey(element) {
 
     $.ajax({
         method: "GET",
-        url: "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + nickname.val + "?api_key=RGAPI-5c96ae2e-82d4-4c7e-b7ca-329fd661ef0b",
-        data: { summonerName: nickname.val },
+        url: "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + nickname + "?api_key=RGAPI-5c96ae2e-82d4-4c7e-b7ca-329fd661ef0b",
+        data: { summonerName: nickname },
         
         headers: {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36",
