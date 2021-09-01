@@ -5,25 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League of Legend</title>
+    <title>웹 사이트 제목</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="search-wrapper">
-        <div class="input-holder">
-            <input type="text" class="search-input" placeholder="LOL 닉네임을 입력하세요."
-                onkeyup="if(window.event.keyCode==13){enterkey(this)}" />
-            <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+
+    <p class="a">YOUSEUNG .GG</p>
+    <h1><span class="half_HL">::DESCRIPTION 어쩌구 저쩌구::</span></h1>
+
+    <div class="container">
+        <div class="search-box" id="SBox">
+            <input id="search" placeholder="소환사 이름 입력 " type="text" autocomplete="off"
+                onkeyup="if(window.event.keyCode==13){setNickname(this.value); myfunc();}">
+            <div class="also search-link" onclick="searchbox(0);" id="searchclick"></div>
+            <a class="fa fa-cog also setting"></a>
         </div>
-        <span class="close" onclick="searchToggle(this, event);"></span>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="system.js"></script>
-
-    
+    <script type="text/javascript"
+        src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-611e10dce2117b36"></script>
 </body>
 
 </html>
