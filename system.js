@@ -15,14 +15,14 @@ function myfunc() {
     location.href = "search.html";
 }
 
-function setNickname(elem){
+function setNickname(elem) {
 
     var name = elem;
     window.localStorage.setItem('name', name);
     console.log(window.localStorage.getItem('name'));
 }
 
-function loadNickname(){
+function loadNickname() {
     return window.localStorage.getItem('name');
 }
 
@@ -46,6 +46,36 @@ function enterkey(element) {
             alert("success!");
 
             console.log(result)
+
+            $.ajax({
+                method: "GET",
+                url: "https://cors0327.herokuapp.com/https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/" + result.id + "?api_key=RGAPI-5c96ae2e-82d4-4c7e-b7ca-329fd661ef0b",
+                data: { encryptedSummonerId: result.id },
+                headers: {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36",
+                    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+                    "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
+                    "Origin": "https://developer.riotgames.com"
+                }
+            })
+                .done(function (msg) {
+                    console.log(msg);
+
+                    var i = 0;
+
+                    for (i = 0; i < 2; i++) {
+                        if (msg[i].queueType == "RANKED_SOLO_5x5") {
+                            console.log(msg[i].tier);
+                            document.getElementById("type").innerHTML = "__솔로랭크__"
+                            document.getElementById("tier").innerHTML = msg[i].tier + " " + msg[i].rank;
+                            document.getElementById("leaguePoints").innerHTML = "점수: " + msg[i].leaguePoints + "LP";
+                            document.getElementById("wins").innerHTML = "wins: " + msg[i].wins;
+                            document.getElementById("losses").innerHTML = "losses: " + msg[i].losses;
+                            document.getElementById("winRate").innerHTML = "승률: " + ((msg[i].wins /  (msg[i].wins + msg[i].losses))*100).toFixed(1) + "%";
+                            break;
+                        }
+                    }
+                })
 
             $.ajax({
                 method: "GET",
@@ -121,19 +151,19 @@ function enterkey(element) {
                                 console.log("나의 KDA : " + myKDA);
                                 console.log("팀원의 KDA : " + otherKDA);
 
-                                if(otherKDA < 1){
+                                if (otherKDA < 1) {
                                     teamSkill = "인력거";
                                 }
-                                else if(1 <= otherKDA && otherKDA < 2){
+                                else if (1 <= otherKDA && otherKDA < 2) {
                                     teamSkill = "마차";
                                 }
-                                else if(2 <= otherKDA && otherKDA <= 3){
+                                else if (2 <= otherKDA && otherKDA <= 3) {
                                     teamSkill = "자가용";
                                 }
-                                else if(3 <= otherKDA && otherKDA <= 6){
+                                else if (3 <= otherKDA && otherKDA <= 6) {
                                     teamSkill = "버스";
                                 }
-                                else if(otherKDA > 5){
+                                else if (otherKDA > 5) {
                                     teamSkill = "KTX";
                                 }
 

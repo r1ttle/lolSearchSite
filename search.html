@@ -10,6 +10,15 @@
 </head>
 
 <body>
+
+    <div id="type"></div>
+    <div id="nickname"></div>
+    <div id="tier"></div>
+    <div id="leaguePoints"></div>
+    <div id="wins"></div>
+    <div id="losses"></div>
+    <div id="winRate"></div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
@@ -18,6 +27,8 @@
         var userName = loadNickname();
         console.log(userName)
         enterkey(userName);
+
+        document.getElementById("nickname").innerHTML=userName
     </script>
 
     <script type="text/javascript"
