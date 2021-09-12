@@ -1,30 +1,36 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOLTMI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>LOLTMI - 게임 분석</title>
+    <link rel="stylesheet" href="search.css">
 </head>
 
 <body>
 
-    <h2 class="a">ㆍLOLTMIㆍ</h2>
-
-    <h1><span>" 인공지능이 분석해주는 너의 롤 TMI "</span></h1>
-
-    <h3><img src="solid.png"></h3>
-
-    <button class="btn" onclick="myfunc2()">ㆍ시작하기ㆍ</button>
+    <div id="type"></div>
+    <div id="nickname"></div>
+    <div id="tier"></div>
+    <div id="leaguePoints"></div>
+    <div id="wins"></div>
+    <div id="losses"></div>
+    <div id="winRate"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <script src="system.js"></script>
+    <script>
+        var userName = loadNickname();
+        console.log(userName)
+        enterkey(userName);
+
+        document.getElementById("nickname").innerHTML=userName
+    </script>
+
     <script type="text/javascript"
         src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-611e10dce2117b36"></script>
 </body>

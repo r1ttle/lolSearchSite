@@ -1,3 +1,9 @@
+
+
+
+API_KEY = "RGAPI-5c96ae2e-82d4-4c7e-b7ca-329fd661ef0b";
+
+
 function searchToggle(obj, evt) {
     var container = $(obj).closest('.search-wrapper');
     if (!container.hasClass('active')) {
@@ -12,6 +18,10 @@ function searchToggle(obj, evt) {
 }
 
 function myfunc() {
+    location.href = "result.html";
+}
+
+function myfunc2() {
     location.href = "search.html";
 }
 
@@ -32,7 +42,7 @@ function enterkey(element) {
 
     $.ajax({
         method: "GET",
-        url: "https://cors0327.herokuapp.com/https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + nickname + "?api_key=RGAPI-5c96ae2e-82d4-4c7e-b7ca-329fd661ef0b",
+        url: "https://cors0327.herokuapp.com/https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + nickname + "?api_key=" + API_KEY,
         data: { summonerName: nickname },
 
         headers: {
@@ -49,7 +59,7 @@ function enterkey(element) {
 
             $.ajax({
                 method: "GET",
-                url: "https://cors0327.herokuapp.com/https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/" + result.id + "?api_key=RGAPI-5c96ae2e-82d4-4c7e-b7ca-329fd661ef0b",
+                url: "https://cors0327.herokuapp.com/https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/" + result.id + "?api_key=" + API_KEY,
                 data: { encryptedSummonerId: result.id },
                 headers: {
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36",
@@ -79,7 +89,7 @@ function enterkey(element) {
 
             $.ajax({
                 method: "GET",
-                url: "https://cors0327.herokuapp.com/https://kr.api.riotgames.com/lol/match/v4/matchlists/by-account/" + result.accountId + "?api_key=RGAPI-5c96ae2e-82d4-4c7e-b7ca-329fd661ef0b",
+                url: "https://cors0327.herokuapp.com/https://kr.api.riotgames.com/lol/match/v4/matchlists/by-account/" + result.accountId + "?api_key=" + API_KEY,
                 data: { encryptedAccountId: result.accountId },
                 headers: {
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36",
@@ -98,7 +108,7 @@ function enterkey(element) {
 
                         $.ajax({
                             method: "GET",
-                            url: "https://cors0327.herokuapp.com/https://kr.api.riotgames.com/lol/match/v4/matches/" + gameID[index] + "?api_key=RGAPI-5c96ae2e-82d4-4c7e-b7ca-329fd661ef0b",
+                            url: "https://cors0327.herokuapp.com/https://kr.api.riotgames.com/lol/match/v4/matches/" + gameID[index] + "?api_key=" + API_KEY,
                             data: { matchId: gameID[index] },
                             headers: {
                                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36",

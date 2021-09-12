@@ -5,22 +5,31 @@
 *{margin:0px;padding:0px;}
 
 body{
-  height:1000px;
-  background-color:#fbfbfb;
+  background-color: #ffffff;
 }
 
 .half_HL {
-  background: linear-gradient(to top, #FFE400 50%, transparent 50%);
+  background: linear-gradient(to top, #FFE849 50%, transparent 50%);
 }
 
 .a {
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
-p {
-  color:#ffec40;
+.text-stroke {
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;  
+}
+
+h2 {
+  z-index: 2;
+  color:#ffec46;
   font-family: "Jua";
   font-size: 60px;
+  font-weight: bolder;
   text-align: center;
   position: relative;
   top: 220px;
@@ -31,13 +40,78 @@ p {
 }
 
 h1 {
-  color: #323232;
+  z-index: 1;
+  color: #ffffff;
   font-family: "Jua";
-  font-size: 27px;
+  font-size: 28px;
   font-weight: lighter;
   text-align: center;
   position: relative;
   top: 250px;
+
+  text-shadow:
+  #000 -1px -1px,
+  #000 1px -1px,
+  #000 -1px 1px,
+  #000 1px 1px,
+  #000 -1.15px -1.15px,
+  #000 1.15px -1.15px,
+  #000 -1.15px 1.15px,
+  #000 1.15px 1.15px,
+  #000 -1.25px -1.25px,
+  #000 1.25px -1.25px,
+  #000 -1.25px 1.25px,
+  #000 1.25px 1.25px,
+  #000 -1.35px -1.35px,
+  #000 1.35px -1.35px,
+  #000 -1.35px 1.35px,
+  #000 1.35px 1.35px,
+  #000 -1.45px -1.45px,
+  #000 1.45px -1.45px,
+  #000 -1.45px 1.45px,
+  #000 1.45px 1.45px,
+  #000 -1.5px -1.5px,
+  #000 1.5px -1.5px,
+  #000 -1.5px 1.5px,
+  #000 1.5px 1.5px;
+}
+
+h3{
+  z-index: 0;
+  text-align: center;
+  position: relative;
+  top:400px;
+}
+
+.btn {
+  outline: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-color: #ffe74e;
+  font-size: 22px;
+  font-weight: 300px;
+  font-family: "Jua";
+  
+  color: rgb(49, 49, 49);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 15px 45px;
+  margin: 0 auto;
+  position: relative;
+  top:200px;
+  border-radius: 150px;
+  box-shadow: 0 6px #ff9c33;
+}
+
+.btn:hover {
+  box-shadow: 0 4px #ff9c33;
+  top: 202px;
+}
+
+.btn:active {
+  box-shadow: none;
+  top: 206px;
 }
 
 .navigation {
