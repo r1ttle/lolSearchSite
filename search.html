@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOLTMI - 검색</title>
 </head>
+
 <body>
+
     <div class="container">
         <div class="search-box" id="SBox">
             <input id="search" placeholder="소환사 이름 입력 " type="text" autocomplete="off"
                 onkeyup="if(window.event.keyCode==13){setNickname(this.value); myfunc();}">
-            <div class="also search-link" onclick="searchbox(0);" id="searchclick"></div>
+            <div class="also search-link" id="searchclick"></div>
             <a class="fa fa-cog also setting"></a>
         </div>
     </div>
@@ -21,5 +23,7 @@
     <script src="system.js"></script>
     <script type="text/javascript"
         src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-611e10dce2117b36"></script>
+
 </body>
+
 </html>

@@ -21,15 +21,18 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="APIKEY.js"></script>
     <script src="script.js"></script>
     <script src="system.js"></script>
-    <script>
+    <script src="apikey.js"></script>
+
+    <script type="module">
+
         var userName = loadNickname();
         console.log(userName)
         enterkey(userName, API_KEY);
 
         document.getElementById("nickname").innerHTML=userName
+
     </script>
 
     <script type="text/javascript"
