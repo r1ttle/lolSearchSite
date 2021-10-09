@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body{
+    background-color: #9f9f9f;
+}
+
+h1{
+    color:#fff384;
+    font-family: "Jua";
+    font-size:50px;
+    text-shadow: #2f2f2f -2px -2px,  #2f2f2f -1.5px -1.5px, #2f2f2f 2px -2px, #2f2f2f 1.5px -1.5px, #2f2f2f -2px 2px, #2f2f2f -1.5px 1.5px, 
+  #2f2f2f 0px 0px,#2f2f2f 1.5px 1.5px,#2f2f2f 2px 2px,#2f2f2f 3px 3px,#2f2f2f 4px 4px,
+  #2f2f2f 5px 5px, #2f2f2f 6px 6px,#2f2f2f 7px 7px,#2f2f2f 8px 8px,#2f2f2f 9px 9px, #2f2f2f 10px 10px;
+
+    text-align: center;
+    position: relative;
+    top:70px;
+}
+
+p{
+  position: relative;
+  top:0px;
+  z-index: 10;
+}
+.btn {
+    outline: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    background-color: #ffe74e;
+    font-size: 18px;
+    font-weight: 300px;
+    font-family: "Jua";
+    
+    color: rgb(49, 49, 49);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    margin: 0 auto;
+    position: relative;
+    top:350px;
+    border-radius: 150px;
+    box-shadow: 0 6px #ff9c33;
+  }
+  
+  .btn:hover {
+    box-shadow: 0 4px #ff9c33;
+    top: 352px;
+  }
+  
+  .btn:active {
+    box-shadow: none;
+    top: 356px;
+  }
+  
+  .navigation {
+    background-color:#F2CB05;
+    width:100%;
+    height:50px;
+    box-shadow: 0px 1px 1px #717171;
+    line-height:52px;
+    color:#62bb49;
+  }
+  .container {
+    width:760px;
+    margin:auto;
+    position: relative;
+  }
+  .title {
+    font-family:'Cookie';
+    font-size:32px;
+    cursor: pointer;
+  }
+  .search-control{
+    font-family:'Open Sans';
+    position: absolute;
+    right:0;
+    cursor: pointer;
+    color: #F2CB05;
+  }
+  .search-control:hover {color:#F2CB05;}
+  .fa-home {
+    font-size:22px;
+  }
+  .search-box {
+    margin: 0 auto;
+    width:100%;
+    position: relative;
+    top: 300px;
+    height:48px;
+    transition:opacity 0.4s linear ,visibility 0.4s linear 0s;
+  }
+  .search-box > #search {
+    margin: 0 auto;
+    width:640px;
+    height:48px;
+    border-radius:6px 0px 0px 6px;
+    box-shadow:none;
+    box-shadow: 1px 2px 2px #ddd; 
+  }
+  input , input:focus {
+    margin: 0 auto;
+    border:none;
+    box-shadow:none;
+    background-color:none;
+    outline: 0;
+    font-size:16px;
+    font-family:'Open Sans';
+    color:rgb(74, 74, 74);
+    padding:0px 12px;
+  }
+  .also {
+    margin: 0 auto;
+    font-family:'fontawesome';
+    color:rgb(74, 74, 74);
+    display:inline-block;
+    background-color:#fff;
+    height:48px;
+    width:48px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    border-left:1px solid #ddd;
+    position: absolute;
+    top:0;
+    box-shadow: 1px 2px 2px #ddd;
+  }
+  .search-link:hover {color:#686868;}

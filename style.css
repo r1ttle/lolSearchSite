@@ -99,19 +99,19 @@ h3{
   padding: 15px 45px;
   margin: 0 auto;
   position: relative;
-  top:200px;
+  top:350px;
   border-radius: 150px;
   box-shadow: 0 6px #ff9c33;
 }
 
 .btn:hover {
   box-shadow: 0 4px #ff9c33;
-  top: 202px;
+  top: 352px;
 }
 
 .btn:active {
   box-shadow: none;
-  top: 206px;
+  top: 356px;
 }
 
 .navigation {
