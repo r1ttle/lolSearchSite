@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOLTMI - 결과</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+
+<body>
+
+
+    <h1 id="nickname"></h1>
+    <div id="tier"></div>
+    <div id="leaguePoints"></div>
+    <div id="wins"></div>
+    <div id="losses"></div>
+    <div id="winRate"></div>
+    <div id="teamSkill"></div>
+
+    <button onclick="myfunc4()" class=btn id="restart"> 재시작</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="system.js"></script>
+    <script src="apikey.js"></script>
+
+    <script>
+
+
+        var userName = loadNickname();
+
+        enterkey(userName, "RGAPI-e1f3688a-e725-4517-ae3d-437398d80d22");
+        document.getElementById("nickname").innerHTML = userName;
+
+        loadInfo();
+        setHTML();
+
+        console.log("hello");
+
+    </script>
+
+    <div class="addthis_inline_share_toolbox_cmoi" id="share"></div>
+
+    <script type="text/javascript"
+        src="https://s7.addthis.com/js/300/addthis_widget.js#pubid= ra-611e10dce2117b36"></script>
+</body>
+
+</html>

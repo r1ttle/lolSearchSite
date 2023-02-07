@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOLTMI - 검색</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+
+    
+    <h2 class="a">소환사 이름 검색</h2>
+
+    <div class="container">
+        <div class="search-box" id="SBox">
+            <input id="search" class="search" type="search" value="" placeholder="소환사 이름" onkeyup="if(window.event.keyCode==13){setNickname(); myfunc();}">
+            <button class="search-button" onclick="setNickname(); myfunc();"></button>
+        </div>
+    </div>
+
+    <script src="apikey.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="system.js"></script>
+
+</body>
+
+</html>
